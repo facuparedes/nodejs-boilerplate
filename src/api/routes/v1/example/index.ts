@@ -1,5 +1,8 @@
-import { Request, Response } from "express";
+import { Router, Request, Response } from "express";
+const router = Router();
 
-export default function (req: Request, res: Response) {
-  return res.json("Hello world!");
-}
+router.post("/", (req: Request, res: Response) => {
+  res.send("Hello world!");
+});
+
+export default router;
